@@ -53,13 +53,14 @@ app.use("/api/cars",carRoutes)
 app.use("/api/bookings",bookingRoutes)
 app.use("/api/payments",paymentRoutes)
 
+app.get("/",(req,res)=>{
+    res.send("CarRent API is running")
+})
 
 app.get("/profile",authMiddleware,(req,res)=>{
     res.send("Good Day!")
 })
 
-app.get("/",(req,res)=>{
-    res.send("CarRent API is running")
-})
+
 
 app.listen(PORT,()=>{console.log(`server is running at http://localhost:${PORT}`)})
