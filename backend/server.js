@@ -58,4 +58,8 @@ app.get("/profile",authMiddleware,(req,res)=>{
     res.send("Good Day!")
 })
 
+app.get("/",(req,res)=>{
+    res.send("CarRent API is running")
+})
+
 app.listen(PORT,()=>{console.log(`server is running at http://localhost:${PORT}`)})
